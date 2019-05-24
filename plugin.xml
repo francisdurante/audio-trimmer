@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin 
+	id="audio-trimmer-android" 
+	version="0.0.1" 
+	xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>
+		audioTrimmer
+	</name>
+	<js-module name="audioTrimmer" src="www/audioTrimmer.js">
+		<clobbers target="audioTrimmer.cordova.plugins" />
+	</js-module>
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="audioTrimmer">
+				<param name="android-package" 
+				value="audio.trimmer.android.audioTrimmer.AudioTrimmer" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml">
+		</config-file>
+		
+		<config-file parent="/manifest/application" target="AndroidManifest.xml">
+			<activity android:label="@string/activity_name" android:name="audio.trimmer.android.audioTrimmer.MainActivity" android:theme="@style/Theme.AppCompat" android:windowSoftInputMode="adjustResize" />
+			<activity android:label="@string/activity_name" android:name="audio.trimmer.android.audioTrimmer.AudioTrimmerActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar" android:windowSoftInputMode="adjustResize" />
+		</config-file>
+		
+		
+		<source-file src="src/android/AudioTrimmer.java" target-dir="src/audio/trimmer/android/audioTrimmer" />
+		<source-file src="src/android/MainActivity.java" target-dir="src/audio/trimmer/android/audioTrimmer" />
+		<source-file src="src/android/FakeR.java" target-dir="src/audio/trimmer/android/audioTrimmer" />
+		<source-file src="src/android/AudioTrimmerActivity.java" target-dir="src/audio/trimmer/android/audioTrimmer" />
+		
+		<source-file src="src/android/customAudioViews/MarkerView.java" target-dir="src/audio/trimmer/android/audioTrimmer/customAudioViews" />
+		<source-file src="src/android/customAudioViews/MP4Header.java" target-dir="src/audio/trimmer/android/audioTrimmer/customAudioViews" />
+		<source-file src="src/android/customAudioViews/SamplePlayer.java" target-dir="src/audio/trimmer/android/audioTrimmer/customAudioViews" />
+		<source-file src="src/android/customAudioViews/SongMetadataReader.java" target-dir="src/audio/trimmer/android/audioTrimmer/customAudioViews" />
+		<source-file src="src/android/customAudioViews/SoundFile.java" target-dir="src/audio/trimmer/android/audioTrimmer/customAudioViews" />
+		<source-file src="src/android/customAudioViews/WaveformView.java" target-dir="src/audio/trimmer/android/audioTrimmer/customAudioViews" />
+		<source-file src="src/android/customAudioViews/WAVHeader.java" target-dir="src/audio/trimmer/android/audioTrimmer/customAudioViews" />
+		
+		<source-file src="src/android/utils/Utility.java" target-dir="src/audio/trimmer/android/audioTrimmer/utils" />
+		
+		<source-file src="src/android/res/drawable/ic_music_player.xml" target-dir="res/drawable" />
+		<source-file src="src/android/res/drawable/marker_left.xml" target-dir="res/drawable" />
+		<source-file src="src/android/res/drawable/marker_right.xml" target-dir="res/drawable" />
+		
+		
+		<source-file src="src/android/res/drawable-hdpi/ic_audiohandle.png" target-dir="res/drawable-hdpi" />
+		<source-file src="src/android/res/drawable-hdpi/ic_audiostartrecord.png" target-dir="res/drawable-hdpi" />
+		<source-file src="src/android/res/drawable-hdpi/ic_crop_btn_fill.png" target-dir="res/drawable-hdpi" />
+		<source-file src="src/android/res/drawable-hdpi/ic_edit_btn.png" target-dir="res/drawable-hdpi" />
+		<source-file src="src/android/res/drawable-hdpi/ic_pause_btn.png" target-dir="res/drawable-hdpi" />
+		<source-file src="src/android/res/drawable-hdpi/ic_play_btn.png" target-dir="res/drawable-hdpi" />
+		<source-file src="src/android/res/drawable-hdpi/ic_record_btn1.png" target-dir="res/drawable-hdpi" />
+		<source-file src="src/android/res/drawable-hdpi/ic_refresh_btn.png" target-dir="res/drawable-hdpi" />
+		<source-file src="src/android/res/drawable-hdpi/ic_stop_btn1.png" target-dir="res/drawable-hdpi" />
+		
+		<source-file src="src/android/res/drawable-xhdpi/ic_audiohandle.png" target-dir="res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_audiostartrecord.png" target-dir="res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_crop_btn_fill.png" target-dir="res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_edit_btn.png" target-dir="res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_pause_btn.png" target-dir="res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_play_btn.png" target-dir="res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_record_btn1.png" target-dir="res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_refresh_btn.png" target-dir="res/drawable-xhdpi" />
+		<source-file src="src/android/res/drawable-xhdpi/ic_stop_btn1.png" target-dir="res/drawable-xhdpi" />
+		
+		<source-file src="src/android/res/drawable-xxhdpi/ic_audiohandle.png" target-dir="res/drawable-xxhdpi" />
+		<source-file src="src/android/res/drawable-xxhdpi/ic_audiostartrecord.png" target-dir="res/drawable-xxhdpi" />
+		<source-file src="src/android/res/drawable-xxhdpi/ic_crop_btn_fill.png" target-dir="res/drawable-xxhdpi" />
+		<source-file src="src/android/res/drawable-xxhdpi/ic_edit_btn.png" target-dir="res/drawable-xxhdpi" />
+		<source-file src="src/android/res/drawable-xxhdpi/ic_pause_btn.png" target-dir="res/drawable-xxhdpi" />
+		<source-file src="src/android/res/drawable-xxhdpi/ic_play_btn.png" target-dir="res/drawable-xxhdpi" />
+		<source-file src="src/android/res/drawable-xxhdpi/ic_record_btn1.png" target-dir="res/drawable-xxhdpi" />
+		<source-file src="src/android/res/drawable-xxhdpi/ic_refresh_btn.png" target-dir="res/drawable-xxhdpi" />
+		<source-file src="src/android/res/drawable-xxhdpi/ic_stop_btn1.png" target-dir="res/drawable-xxhdpi" />
+		
+		
+		<source-file src="src/android/res/layout/activity_audio_trim.xml" target-dir="res/layout" />
+		<source-file src="src/android/res/layout/activity_main_audio.xml" target-dir="res/layout" />
+		<source-file src="src/android/res/layout/song_list_layout.xml" target-dir="res/layout" />
+		<source-file src="src/android/res/layout/songs_layout.xml" target-dir="res/layout" />
+		
+		
+		<config-file target="res/values/strings.xml" parent="/*">
+			<string name="cancel">Cancel</string>
+			<string name="upload">Upload</string>
+		</config-file>
+		<source-file src="src/android/res/values/dimens.xml" target-dir="res/values" />
+		<config-file target="res/values/colors.xml" parent="/*">
+			<color name="colorPrimary">#3F51B5</color>
+			<color name="colorPrimaryDark">#303F9F</color>
+			<color name="colorAccent">#FF4081</color>
+
+			<color name="colorGrayAlpha">#80000000</color>
+			<color name="colorBlue">#0e1f2f</color>
+			<color name="colorTextGray">#ADADAD</color>
+			<color name="colorBg">#3be3e3</color>
+			<color name="colorBlack">#000</color>
+			<color name="colorGridLine">#00ed1b24</color>
+			<color name="colorSelectionBorder">#9c41bc</color>
+			<color name="colorWaveformBg">#253571</color>
+			<color name="colorPlaybackIndicator">#b2253571</color>
+			<color name="colorTimeCode">#dd253571</color>
+			<color name="colorTimeCodeShadow">#aa253571</color>
+			<color name="waveformSelected">#adb5cc</color>
+			<color name="waveformUnselected">#adb5cc</color>
+			<color name="waveformUnselectedBackground">#e8e6e7</color>
+		</config-file>
+		
+		<config-file target="res/values/styles.xml" parent="/*">
+			<style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+				<item name="android:windowIsTranslucent">true</item>
+				<item name="android:windowBackground">@android:color/transparent</item>
+				<item name="android:windowContentOverlay">@null</item>
+				<item name="android:windowNoTitle">true</item>
+				<item name="android:windowIsFloating">false</item>
+				<item name="android:backgroundDimEnabled">false</item>
+			</style>
+		</config-file>
+		<source-file src="src/android/res/values-w820dp/dimens.xml" target-dir="res/values-w820dp" />
+	</platform>
+</plugin>

@@ -1,0 +1,17 @@
+{
+  "name": "audio-trimmer-android",
+  "version": "0.0.1",
+  "description": "simple audio/music trimmer",
+  "cordova": {
+    "id": "audio-trimmer-android",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "francisdurante",
+  "license": "ISC"
+}
