@@ -221,6 +221,7 @@
 
                         <TextView
                             android:id="@+id/txtAudioCrop"
+                            android:visibility="gone"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="20dp"
@@ -232,7 +233,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="20dp"
                             android:background="@drawable/ic_crop_btn_fill"
-                            android:visibility="gone" />
+                            />
 
                         <TextView
                             android:id="@+id/txtAudioReset"

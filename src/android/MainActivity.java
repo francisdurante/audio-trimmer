@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity{
                 if (data != null) {
                     //audio trim result will be saved at below path
                     String path = data.getExtras().getString("INTENT_AUDIO_FILE");
+                    finish();
                     //callback success;
                     //
 					// Toast.makeText(MainActivity.this, "Audio stored at " + path, Toast.LENGTH_LONG).show();
