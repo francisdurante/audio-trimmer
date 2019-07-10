@@ -16,28 +16,20 @@ package audio.trimmer.android.audioTrimmer;
 
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
-import android.provider.DocumentsContract;
 import android.provider.MediaStore;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -45,21 +37,19 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.RandomAccessFile;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import audio.trimmer.android.audioTrimmer.customAudioViews.MarkerView;
 import audio.trimmer.android.audioTrimmer.customAudioViews.SamplePlayer;
 import audio.trimmer.android.audioTrimmer.customAudioViews.SoundFile;
 import audio.trimmer.android.audioTrimmer.customAudioViews.WaveformView;
 import audio.trimmer.android.audioTrimmer.utils.Utility;
-
-import audio.trimmer.android.audioTrimmer.FakeR;
-
-import java.io.File;
-import java.io.RandomAccessFile;
-import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Locale;
 
 public class AudioTrimmerActivity extends AppCompatActivity implements View.OnClickListener,
         MarkerView.MarkerListener,
