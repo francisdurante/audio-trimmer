@@ -368,6 +368,7 @@ public class AudioTrimmerActivity extends AppCompatActivity implements View.OnCl
 
         mProgressDialog = new ProgressDialog(context);
         mProgressDialog.setTitle("Loading ...");
+        mProgressDialog.setCancelable(false);
         mProgressDialog.show();
         Thread mRecordAudioThread = new Thread() {
             public void run() {
@@ -1129,6 +1130,7 @@ public class AudioTrimmerActivity extends AppCompatActivity implements View.OnCl
         mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         mProgressDialog.setTitle("Loading ...");
+        mProgressDialog.setCancelable(false);
         mProgressDialog.show();
 
         final SoundFile.ProgressListener listener =
@@ -1190,6 +1192,7 @@ public class AudioTrimmerActivity extends AppCompatActivity implements View.OnCl
     public void getAllMusicFiles(){
         mProgressDialog = new ProgressDialog(context);
         mProgressDialog.setTitle("Loading ...");
+        mProgressDialog.setCancelable(false);
         mProgressDialog.show();
 
         final AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
